@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pre-Made Website Kits for Sale</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f7f7f9;
+      margin: 0;
+      padding: 0;
+      color: #22223b;
+    }
+    .hero {
+      background: linear-gradient(120deg, #4a4e69 60%, #9a8c98 100%);
+      color: #fff;
+      padding: 60px 0 40px 0;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 32px;
+      color: #f2e9e4;
+    }
+    .cta-btn {
+      background: #f2e9e4;
+      color: #4a4e69;
+      padding: 16px 38px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      box-shadow: 0 2px 8px rgba(34,34,59,0.09);
+      margin-top: 10px;
+    }
+    .cta-btn:hover {
+      background: #c9ada7;
+      color: #fff;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+      margin: 48px auto 0 auto;
+      max-width: 1000px;
+    }
+    .feature {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(34,34,59,0.07);
+      padding: 28px 22px;
+      flex: 1 1 260px;
+      min-width: 260px;
+      max-width: 320px;
+      text-align: center;
+    }
+    .feature-icon {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      color: #4a4e69;
+    }
+    .feature-title {
+      font-weight: 600;
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+    .kits-section {
+      max-width: 1100px;
+      margin: 60px auto 0 auto;
+      padding: 0 16px;
+    }
+    .kits-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 32px;
+      color: #22223b;
+    }
+    .kits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+    .kit-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(34,34,59,0.07);
+      padding: 24px 18px 18px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.15s, box-shadow 0.15s;
+      cursor: pointer;
+      border: 1px solid #e0e0e8;
+    }
+    .kit-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 8px 24px rgba(34,34,59,0.13);
+      border-color: #b8b8d1;
+    }
+    .kit-image {
+      width: 90px;
+      height: 90px;
+      background: #e9ecef;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      font-size: 2.5rem;
+      color: #7c7c9a;
+      box-shadow: 0 2px 8px rgba(34,34,59,0.04);
+    }
+    .kit-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #22223b;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .kit-desc {
+      font-size: 1rem;
+      color: #4a4e69;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .kit-link {
+      margin-top: auto;
+      text-decoration: none;
+      color: #fff;
+      background: #4a4e69;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background 0.15s;
+      box-shadow: 0 2px 8px rgba(34,34,59,0.07);
+      display: inline-block;
+    }
+    .kit-link:hover {
+      background: #22223b;
+    }
+    .contact-section {
+      background: #4a4e69;
+      color: #fff;
+      padding: 48px 0 32px 0;
+      margin-top: 60px;
+      text-align: center;
+    }
+    .contact-section h2 {
+      font-size: 2rem;
+      margin-bottom: 18px;
+    }
+    .contact-section p {
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+      color: #f2e9e4;
+    }
+    .contact-btn {
+      background: #f2e9e4;
+      color: #4a4e69;
+      padding: 12px 32px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      box-shadow: 0 2px 8px rgba(34,34,59,0.09);
+    }
+    .contact-btn:hover {
+      background: #c9ada7;
+      color: #fff;
+    }
+    @media (max-width: 700px) {
+      .features {
+        flex-direction: column;
+        gap: 18px;
+      }
+      .kits-section {
+        padding: 0 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>Beautiful Pre-Made Website Kits</h1>
+    <p>Launch your business online in minutes with our professionally designed, ready-to-use website kits.<br>
+    Perfect for restaurants, salons, shops, and more!</p>
+    <button class="cta-btn" onclick="document.getElementById('kits').scrollIntoView({behavior:'smooth'})">Browse Kits</button>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <div class="feature-icon">⚡</div>
+      <div class="feature-title">Instant Launch</div>
+      <div>Get your website live in minutes—no coding required.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🎨</div>
+      <div class="feature-title">Modern Designs</div>
+      <div>Choose from a curated collection of beautiful, mobile-friendly templates.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">💼</div>
+      <div class="feature-title">For Any Business</div>
+      <div>Perfect for restaurants, salons, portfolios, and more.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🛠️</div>
+      <div class="feature-title">Easy Customization</div>
+      <div>Edit text, images, and colors to match your brand.</div>
+    </div>
+  </section>
+
+  <section class="kits-section" id="kits">
+    <div class="kits-title">Our Website Kits</div>
+    <div class="kits-grid">
+      <div class="kit-card">
+        <div class="kit-image"><img src="https://placehold.co/90x90?text=🍽️" alt="Restaurant Kit" style="width:90px;height:90px;border-radius:50%;object-fit:cover;"></div>
+        <div class="kit-title">Restaurant Website</div>
+        <div class="kit-desc">A stylish and modern website kit for restaurants, cafes, and food businesses.</div>
+        <a class="kit-link" href="#" target="_blank">See Demo</a>
+      </div>
+      <div class="kit-card">
+        <div class="kit-image"><img src="https://placehold.co/90x90?text=💈" alt="Barber Shop Kit" style="width:90px;height:90px;border-radius:50%;object-fit:cover;"></div>
+        <div class="kit-title">Barber Shop Website</div>
+        <div class="kit-desc">A clean and sharp website kit for barber shops and hair salons.</div>
+        <a class="kit-link" href="#" target="_blank">See Demo</a>
+      </div>
+      <div class="kit-card">
+        <div class="kit-image"><img src="https://placehold.co/90x90?text=🛍️" alt="Shop Kit" style="width:90px;height:90px;border-radius:50%;object-fit:cover;"></div>
+        <div class="kit-title">Online Shop Website</div>
+        <div class="kit-desc">A modern e-commerce kit for small businesses and online stores.</div>
+        <a class="kit-link" href="#" target="_blank">See Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <h2>Ready to Get Started?</h2>
+    <p>Contact us to purchase a kit, request a custom design, or ask any questions.<br>
+    We’re here to help you launch your dream website!</p>
+    <a href="mailto:your@email.com"><button class="contact-btn">Contact Us</button></a>
+  </section>
+</body>
+</html>
