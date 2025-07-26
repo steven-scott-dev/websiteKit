@@ -3,242 +3,344 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pre-Made Website Kits for Sale</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Modern Website Kits for Sale</title>
+  
   <style>
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f7f7f9;
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      background: #e3f0f7;
       margin: 0;
       padding: 0;
-      color: #22223b;
+      color: #1a2a33;
+      min-height: 100vh;
     }
     .hero {
-      background: linear-gradient(120deg, #4a4e69 60%, #9a8c98 100%);
-      color: #fff;
-      padding: 60px 0 40px 0;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 2.8rem;
-      margin-bottom: 18px;
-      letter-spacing: 1px;
-    }
-    .hero p {
-      font-size: 1.3rem;
-      margin-bottom: 32px;
-      color: #f2e9e4;
-    }
-    .cta-btn {
-      background: #f2e9e4;
-      color: #4a4e69;
-      padding: 16px 38px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
-      box-shadow: 0 2px 8px rgba(34,34,59,0.09);
-      margin-top: 10px;
-    }
-    .cta-btn:hover {
-      background: #c9ada7;
-      color: #fff;
-    }
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 32px;
-      margin: 48px auto 0 auto;
-      max-width: 1000px;
-    }
-    .feature {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(34,34,59,0.07);
-      padding: 28px 22px;
-      flex: 1 1 260px;
-      min-width: 260px;
-      max-width: 320px;
-      text-align: center;
-    }
-    .feature-icon {
-      font-size: 2.2rem;
-      margin-bottom: 12px;
-      color: #4a4e69;
-    }
-    .feature-title {
-      font-weight: 600;
-      font-size: 1.15rem;
-      margin-bottom: 8px;
-    }
-    .kits-section {
-      max-width: 1100px;
-      margin: 60px auto 0 auto;
-      padding: 0 16px;
-    }
-    .kits-title {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 32px;
-      color: #22223b;
-    }
-    .kits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
-    }
-    .kit-card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(34,34,59,0.07);
-      padding: 24px 18px 18px 18px;
+      position: relative;
+      z-index: 1;
+      min-height: 60vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      transition: transform 0.15s, box-shadow 0.15s;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 16px 40px 16px;
+      background-image: url('images/premium_photo-1668473366952-45f06fbf6492.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-bottom: 1.5px solid #b3d0e6;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(227, 240, 247, 0.72); /* soft overlay for readability */
+      z-index: 0;
+      pointer-events: none;
+      backdrop-filter: blur(1.5px);
+    }
+    .hero > * {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+      color: #1a2a33;
+      text-shadow: 0 4px 32px #fff8;
+    }
+    .hero p {
+      font-size: 1.35rem;
+      margin-bottom: 36px;
+      color: #3a4a53;
+      text-shadow: 0 2px 12px #fff8;
+    }
+    .cta-btn {
+      background: linear-gradient(90deg, #b3d0e6 60%, #e3f0f7 100%);
+      color: #1a2a33;
+      padding: 18px 44px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.15rem;
+      font-weight: 700;
       cursor: pointer;
-      border: 1px solid #e0e0e8;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px #b3d0e644;
+      margin-top: 10px;
+      letter-spacing: 1px;
+    }
+    .cta-btn:hover {
+      background: linear-gradient(90deg, #a3c0d6 60%, #b3d0e6 100%);
+      color: #fff;
+      box-shadow: 0 8px 32px #b3d0e666;
+    }
+
+    /* Features Section: Two Columns, Two Rows */
+    .features-columns {
+      margin: 60px auto 0 auto;
+      max-width: 900px;
+      padding: 0 16px;
+    }
+    .features-grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 40px;
+    }
+    .feature-col-item {
+      display: flex;
+      align-items: flex-start;
+      background: none;
+      font-size: 1.15rem;
+      color: #1a2a33;
+      border: none;
+      padding: 0;
+      gap: 18px;
+    }
+    .col-icon {
+      font-size: 2rem;
+      color: #7ec4e6;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .feature-col-item strong {
+      color: #1a2a33;
+    }
+    @media (max-width: 700px) {
+      .features-grid-2col {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+      .feature-col-item {
+        font-size: 1rem;
+        gap: 12px;
+      }
+      .col-icon {
+        font-size: 1.3rem;
+      }
+    }
+
+    /* Kits Section */
+    .kits-section {
+      max-width: 1200px;
+      margin: 70px auto 0 auto;
+      padding: 0 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .kits-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 38px;
+      color: #1a2a33;
+      text-shadow: 0 2px 16px #fff8;
+      letter-spacing: 1px;
+    }
+    .kits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+    }
+    .kit-card {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 18px;
+      box-shadow: 0 4px 32px #b3d0e655;
+      padding: 0 0 22px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.18s, box-shadow 0.18s;
+      cursor: pointer;
+      border: 1.5px solid #b3d0e6;
+      backdrop-filter: blur(6px);
+      overflow: hidden;
+      min-height: 380px;
     }
     .kit-card:hover {
-      transform: translateY(-6px) scale(1.03);
-      box-shadow: 0 8px 24px rgba(34,34,59,0.13);
-      border-color: #b8b8d1;
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 48px #b3d0e699;
+      border-color: #7ec4e6;
     }
-    .kit-image {
-      width: 90px;
-      height: 90px;
-      background: #e9ecef;
-      border-radius: 50%;
+    .kit-image-large {
+      width: 100%;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       margin-bottom: 18px;
-      font-size: 2.5rem;
-      color: #7c7c9a;
-      box-shadow: 0 2px 8px rgba(34,34,59,0.04);
+      background: #e3f0f7;
+      min-height: 160px;
+      max-height: 180px;
+      overflow: hidden;
+    }
+    .kit-image-large img {
+      width: 80%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 0;
+      display: block;
+      filter: brightness(1.08) contrast(1.08);
+      transition: filter 0.2s;
+    }
+    .kit-card:hover .kit-image-large img {
+      filter: brightness(1.18) contrast(1.18) saturate(1.1);
     }
     .kit-title {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: #22223b;
-      margin-bottom: 8px;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1a2a33;
+      margin: 18px 0 8px 0;
       text-align: center;
+      letter-spacing: 0.5px;
     }
     .kit-desc {
-      font-size: 1rem;
-      color: #4a4e69;
+      font-size: 1.08rem;
+      color: #3a4a53;
       text-align: center;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
+      padding: 0 10px;
     }
     .kit-link {
       margin-top: auto;
       text-decoration: none;
       color: #fff;
-      background: #4a4e69;
-      padding: 10px 22px;
-      border-radius: 6px;
-      font-weight: 500;
-      transition: background 0.15s;
-      box-shadow: 0 2px 8px rgba(34,34,59,0.07);
+      background: linear-gradient(90deg, #7ec4e6 60%, #b3d0e6 100%);
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.15s, color 0.15s;
+      box-shadow: 0 2px 12px #b3d0e644;
       display: inline-block;
+      letter-spacing: 0.5px;
     }
     .kit-link:hover {
-      background: #22223b;
+      background: linear-gradient(90deg, #b3d0e6 60%, #7ec4e6 100%);
+      color: #1a2a33;
     }
+
+    /* Contact Section */
     .contact-section {
-      background: #4a4e69;
-      color: #fff;
-      padding: 48px 0 32px 0;
-      margin-top: 60px;
+      background: linear-gradient(120deg, #e3f0f7 60%, #b3d0e6 100%);
+      color: #1a2a33;
+      padding: 56px 0 38px 0;
+      margin-top: 80px;
       text-align: center;
+      position: relative;
+      z-index: 1;
+      border-top: 1.5px solid #b3d0e6;
     }
     .contact-section h2 {
       font-size: 2rem;
       margin-bottom: 18px;
+      color: #1a2a33;
     }
     .contact-section p {
-      font-size: 1.1rem;
-      margin-bottom: 24px;
-      color: #f2e9e4;
+      font-size: 1.15rem;
+      margin-bottom: 28px;
+      color: #3a4a53;
     }
     .contact-btn {
-      background: #f2e9e4;
-      color: #4a4e69;
-      padding: 12px 32px;
+      background: #7ec4e6;
+      color: #fff;
+      padding: 14px 36px;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 1.1rem;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       transition: background 0.2s, color 0.2s;
-      box-shadow: 0 2px 8px rgba(34,34,59,0.09);
+      box-shadow: 0 2px 12px #b3d0e644;
+      letter-spacing: 0.5px;
     }
     .contact-btn:hover {
-      background: #c9ada7;
-      color: #fff;
+      background: #b3d0e6;
+      color: #1a2a33;
     }
-    @media (max-width: 700px) {
-      .features {
-        flex-direction: column;
-        gap: 18px;
+    @media (max-width: 900px) {
+      .kits-grid {
+        grid-template-columns: 1fr;
       }
-      .kits-section {
-        padding: 0 4px;
+    }
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+      .kits-title {
+        font-size: 1.3rem;
+      }
+      .kit-title {
+        font-size: 1.1rem;
+      }
+      .kit-desc {
+        font-size: 0.98rem;
+      }
+      .kit-image-large img {
+        height: 120px;
       }
     }
   </style>
 </head>
 <body>
   <section class="hero">
-    <h1>Beautiful Pre-Made Website Kits</h1>
-    <p>Launch your business online in minutes with our professionally designed, ready-to-use website kits.<br>
-    Perfect for restaurants, salons, shops, and more!</p>
-    <button class="cta-btn" onclick="document.getElementById('kits').scrollIntoView({behavior:'smooth'})">Browse Kits</button>
+    <h1>Modern Website Kits</h1>
+    <p>Launch your business online in minutes with our clean, ready-to-use website kits.<br>
+    Minimal, mobile-friendly, and designed for the future.</p>
+    <button class="cta-btn" onclick="document.querySelector('.kits-section').scrollIntoView({behavior:'smooth'})">Browse Kits</button>
   </section>
 
-  <section class="features">
-    <div class="feature">
-      <div class="feature-icon">⚡</div>
-      <div class="feature-title">Instant Launch</div>
-      <div>Get your website live in minutes—no coding required.</div>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">🎨</div>
-      <div class="feature-title">Modern Designs</div>
-      <div>Choose from a curated collection of beautiful, mobile-friendly templates.</div>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">💼</div>
-      <div class="feature-title">For Any Business</div>
-      <div>Perfect for restaurants, salons, portfolios, and more.</div>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">🛠️</div>
-      <div class="feature-title">Easy Customization</div>
-      <div>Edit text, images, and colors to match your brand.</div>
+  <!-- Features: Two Columns, Two Rows -->
+  <section class="features-columns">
+    <div class="features-grid-2col">
+      <div class="feature-col-item">
+        <span class="col-icon">⚡</span>
+        <div>
+          <strong>Instant Launch:</strong> <br>Get your website live in minutes—no coding required.
+        </div>
+      </div>
+      <div class="feature-col-item">
+        <span class="col-icon">🎨</span>
+        <div>
+          <strong>Modern Designs:</strong> <br>Curated collection of beautiful, mobile-friendly templates.
+        </div>
+      </div>
+      <div class="feature-col-item">
+        <span class="col-icon">💼</span>
+        <div>
+          <strong>For Any Business:</strong> <br>Perfect for restaurants, salons, portfolios, and more.
+        </div>
+      </div>
+      <div class="feature-col-item">
+        <span class="col-icon">🛠️</span>
+        <div>
+          <strong>Easy Customization:</strong> <br>Edit text, images, and colors to match your brand.
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="kits-section" id="kits">
+  <section class="kits-section">
     <div class="kits-title">Our Website Kits</div>
     <div class="kits-grid">
       <div class="kit-card">
-        <div class="kit-image"><img src="images\Screenshot (82).png" alt="" Restaurant kit="width:90px;height:90px;border-radius:50%;object-fit:cover;"></div>
+        <div class="kit-image-large">
+          <img src="images/Screenshot (82).png" alt="Restaurant kit">
+        </div>
         <div class="kit-title">Restaurant Website</div>
         <div class="kit-desc">A stylish and modern website kit for restaurants, cafes, and food businesses.</div>
         <a class="kit-link" href="https://restaurantssite.netlify.app/" target="_blank">See Demo</a>
       </div>
       <div class="kit-card">
-        <div class="kit-image"><img src="https://restaurantssite.netlify.app/" alt="Barber Shop Kit" style="width:90px;height:90px;border-radius:50%;object-fit:cover;"></div>
+        <div class="kit-image-large">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80" alt="Barber Shop Kit">
+        </div>
         <div class="kit-title">Barber Shop Website</div>
         <div class="kit-desc">A clean and sharp website kit for barber shops and hair salons.</div>
         <a class="kit-link" href="#" target="_blank">See Demo</a>
       </div>
       <div class="kit-card">
-        <div class="kit-image"><img src="https://placehold.co/90x90?text=🛍️" alt="Shop Kit" style="width:90px;height:90px;border-radius:50%;object-fit:cover;"></div>
+        <div class="kit-image-large">
+          <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b1a48?auto=format&fit=crop&w=800&q=80" alt="Shop Kit">
+        </div>
         <div class="kit-title">Online Shop Website</div>
         <div class="kit-desc">A modern e-commerce kit for small businesses and online stores.</div>
         <a class="kit-link" href="#" target="_blank">See Demo</a>
